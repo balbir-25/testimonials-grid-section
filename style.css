@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    min-width: 1340px;
+    background-color: hsl(210, 46%, 95%);
+  }
+  /* ============================START MAIN AREA========================================== */
+  .site{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "dan dan jon ki"
+    "jea pat pat ki";
+    padding: 5rem;
+    gap: 1rem;
+  }
+
+  .site-section{
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+
+  .name{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .person{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-img{
+    border-radius: 100%;
+    border: 1px solid hsl(0, 0%, 81%);
+  }
+
+  .person-name{
+    font-size: 1rem;
+    font-family: "Barlow Semi Condensed";
+    font-weight: 600;
+    color: hsl(210, 46%, 95%);
+  }
+
+  .person-small{
+    position: absolute;
+    margin-top: 1.2rem;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: "Barlow Semi Condensed";
+    color:hsl(210, 46%, 95%) ;
+    opacity: 50%;
+  }
+
+  .section-h1{
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: "Barlow Semi Condensed";
+    margin-top: 1rem;
+    color: hsl(210, 46%, 95%);
+    line-height: 1.5rem;
+  }
+
+  .section-para{
+     font-size: 0.9rem;
+    font-weight: 500;
+    font-family: "Barlow Semi Condensed";
+    margin-top: 1rem;
+    color:hsl(210, 46%, 95%) ;
+    line-height: 1.5rem;
+    opacity: 70%;
+    margin-top: 1rem;
+  }
+
+ /* ==============================START DANIEL SECTION AREA============================== */
+ #dan{
+  grid-area: dan;
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position-x: 80%;
+ }
+ /* ==============================END DANIEL SECTION AREA============================== */
+ /* ==============================START JONATHAN SECTION AREA============================== */
+ #jon{
+  grid-area: jon;
+  background-color: hsl(217, 19%, 35%);
+ }
+ /* ==============================END JONATHAN SECTION AREA============================== */
+ /* ==============================START JEANETTE SECTION AREA============================== */
+ #jea{
+  grid-area: jea;
+  background-color: hsl(0, 0%, 100%);
+ }
+
+ #jea .person-name{
+  color: hsl(217, 19%, 35%);
+ }
+
+ #jea .person-small{
+  color: hsl(217, 19%, 35%);
+ }
+
+ #jea .section-h1, #jea .section-para{
+  color: hsl(219, 29%, 14%);
+ }
+ /* ==============================END JEANETTE SECTION AREA============================== */
+ /* ==============================START PATRICK SECTION AREA============================== */
+ #pat{
+  grid-area: pat;
+  background-color: hsl(219, 29%, 14%);
+
+ }
+ /* ==============================END PATRICK SECTION AREA============================== */
+ /* ==============================START KIRA SECTION AREA============================== */
+ #ki{
+  grid-area: ki;
+  background-color: hsl(0, 0%, 100%);
+ }
+
+ #ki .person-name{
+  color: hsl(217, 19%, 35%);
+ }
+
+ #ki .person-small{
+  color: hsl(217, 19%, 35%);
+ }
+
+ #ki .section-h1, #ki .section-para{
+  color: hsl(219, 29%, 14%);
+ }
+
+ /* ==============================END KIRA SECTION AREA============================== */
+  /* ============================END MAIN AREA========================================== */
+  /* =============================START FOOTER  AREA=========================== */
+.foot {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 20px;
+    color: hsl(0, 100%, 67%);
+    background-color: hsl(240, 10%, 16%);
+  }
+  
+  .foot a {
+    text-decoration: none;
+    color: hsl(39, 100%, 56%);
+  }
+  
+  .foot a:hover {
+    color: hsl(300, 69%, 71%);
+  }
+  /* =============================END FOOTER  AREA=========================== */
+  /* =============================START MEDIA QUERY========================== */
+  @media screen and (max-width:375px) {
+  
+  body{
+    min-width: 375px;
+  }
+
+  .site{
+    grid-template-columns: 1fr;
+    grid-template-areas: "dan"
+    "jon"
+    "jea"
+    "pat"
+    "ki";
+    padding: 1rem;
+  }
+
+  .site-section{
+    width: 100%;
+  }
+
+  .person-small{
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .section-h1{
+    font-size: 1.41rem;
+  }
+
+  #dan{
+    background-position-x: 90%;
+  }
+
+  .section-para{
+    font-size: 0.97rem;
+  }
+}
+  /* =============================END MEDIA QUERY========================== */
